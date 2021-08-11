@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -286,8 +286,8 @@
 <wire x1="-0.525" y1="-0.25" x2="-0.525" y2="0.25" width="0.12" layer="51"/>
 <wire x1="-0.525" y1="0.25" x2="0.525" y2="0.25" width="0.12" layer="51"/>
 <wire x1="0.525" y1="0.25" x2="0.525" y2="-0.25" width="0.12" layer="51"/>
-<smd name="1" x="-0.4575" y="0" dx="0.5851" dy="0.6118" layer="1" thermals="no"/>
-<smd name="2" x="0.4575" y="0" dx="0.5851" dy="0.6118" layer="1" thermals="no"/>
+<smd name="1" x="-0.4575" y="0" dx="0.5851" dy="0.6118" layer="1"/>
+<smd name="2" x="0.4575" y="0" dx="0.5851" dy="0.6118" layer="1"/>
 <text x="0" y="0.635" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.635" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
 <wire x1="-0.95" y1="0.55" x2="-0.95" y2="-0.55" width="0.127" layer="39"/>
@@ -315,8 +315,8 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="stella-wearables">
-<description language="en">&lt;b&gt;Stella Wearables Design Rules based on OSH Park Design Rules&lt;/b&gt;
+<designrules name="oshpark-2layer">
+<description language="en">&lt;b&gt;OSH Park Design Rules&lt;/b&gt;
 &lt;p&gt;
 Please make sure your boards conform to these design rules.
 &lt;/p&gt;
@@ -327,22 +327,22 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035559375mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.035559375mm"/>
 <param name="mtIsolate" value="1.6mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
-<param name="mdWireWire" value="3mil"/>
-<param name="mdWirePad" value="3mil"/>
-<param name="mdWireVia" value="3mil"/>
-<param name="mdPadPad" value="3mil"/>
-<param name="mdPadVia" value="3mil"/>
-<param name="mdViaVia" value="3mil"/>
-<param name="mdSmdPad" value="3mil"/>
-<param name="mdSmdVia" value="3mil"/>
-<param name="mdSmdSmd" value="3mil"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="6mil"/>
+<param name="mdSmdVia" value="6mil"/>
+<param name="mdSmdSmd" value="6mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
 <param name="mdCopperDimension" value="15mil"/>
 <param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="3mil"/>
-<param name="msDrill" value="6mil"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="10mil"/>
 <param name="msMicroVia" value="10mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -545,21 +545,21 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U1" pad="4"/>
 <contactref element="U1" pad="EP"/>
 <contactref element="C1" pad="2"/>
-<via x="-2.5" y="-0.75" extent="1-16" drill="0.35" diameter="0.1524"/>
+<via x="-2.5" y="-0.85" extent="1-16" drill="0.35" diameter="0.1524"/>
 <via x="0" y="-1.65" extent="1-16" drill="0.35" diameter="0.1524"/>
 <via x="4.5" y="0.8" extent="1-16" drill="0.35" diameter="0.1524"/>
 <wire x1="3.6575" y1="0.8" x2="4.5" y2="0.8" width="0.1524" layer="1"/>
-<wire x1="-1.425" y1="-0.75" x2="-2.5" y2="-0.75" width="0.1524" layer="1"/>
+<wire x1="-1.425" y1="-0.75" x2="-1.825" y2="-0.75" width="0.1524" layer="1"/>
+<wire x1="-1.825" y1="-0.75" x2="-1.925" y2="-0.85" width="0.1524" layer="1"/>
+<wire x1="-1.925" y1="-0.85" x2="-2.5" y2="-0.85" width="0.1524" layer="1"/>
 <contactref element="J1" pad="4"/>
 <wire x1="0" y1="0" x2="0" y2="-1.65" width="0.1524" layer="1"/>
 </signal>
 <signal name="!WP!">
 <contactref element="U1" pad="3"/>
-<wire x1="-1.425" y1="-0.25" x2="-1.85" y2="-0.25" width="0.1524" layer="1"/>
-<wire x1="-2.35" y1="0.25" x2="-1.85" y2="-0.25" width="0.1524" layer="1"/>
 <contactref element="J1" pad="3"/>
-<wire x1="-7.62" y1="-1.27" x2="-6.1" y2="0.25" width="0.1524" layer="1"/>
-<wire x1="-6.1" y1="0.25" x2="-2.35" y2="0.25" width="0.1524" layer="1"/>
+<wire x1="-7.62" y1="-1.27" x2="-6.6" y2="-0.25" width="0.1524" layer="1"/>
+<wire x1="-6.6" y1="-0.25" x2="-1.425" y2="-0.25" width="0.1524" layer="1"/>
 </signal>
 <signal name="!RESET!">
 <contactref element="U1" pad="7"/>
@@ -569,29 +569,23 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </signal>
 <signal name="SO">
 <contactref element="U1" pad="2"/>
-<wire x1="-1.425" y1="0.25" x2="-1.85" y2="0.25" width="0.1524" layer="1"/>
-<wire x1="-2.1" y1="0.5" x2="-1.85" y2="0.25" width="0.1524" layer="1"/>
 <contactref element="J1" pad="2"/>
-<wire x1="-7.62" y1="1.27" x2="-6.85" y2="0.5" width="0.1524" layer="1"/>
-<wire x1="-6.85" y1="0.5" x2="-2.1" y2="0.5" width="0.1524" layer="1"/>
+<wire x1="-7.62" y1="1.27" x2="-6.6" y2="0.25" width="0.1524" layer="1"/>
+<wire x1="-6.6" y1="0.25" x2="-1.425" y2="0.25" width="0.1524" layer="1"/>
 </signal>
 <signal name="SI">
 <contactref element="U1" pad="5"/>
-<wire x1="1.425" y1="-0.75" x2="1.85" y2="-0.75" width="0.1524" layer="1"/>
-<wire x1="1.85" y1="-0.75" x2="2.35" y2="-0.25" width="0.1524" layer="1"/>
 <contactref element="J2" pad="4"/>
 <wire x1="6.2" y1="-2.39" x2="7.62" y2="-3.81" width="0.1524" layer="1"/>
-<wire x1="6.05" y1="-0.25" x2="6.2" y2="-0.4" width="0.1524" layer="1"/>
-<wire x1="2.35" y1="-0.25" x2="6.05" y2="-0.25" width="0.1524" layer="1"/>
-<wire x1="6.2" y1="-0.4" x2="6.2" y2="-2.39" width="0.1524" layer="1"/>
+<wire x1="5.95" y1="-0.75" x2="6.2" y2="-1" width="0.1524" layer="1"/>
+<wire x1="1.425" y1="-0.75" x2="5.95" y2="-0.75" width="0.1524" layer="1"/>
+<wire x1="6.2" y1="-1" x2="6.2" y2="-2.39" width="0.1524" layer="1"/>
 </signal>
 <signal name="SCLK">
 <contactref element="U1" pad="6"/>
-<wire x1="1.425" y1="-0.25" x2="1.85" y2="-0.25" width="0.1524" layer="1"/>
-<wire x1="2.1" y1="0" x2="1.85" y2="-0.25" width="0.1524" layer="1"/>
 <contactref element="J2" pad="3"/>
-<wire x1="7.62" y1="-1.27" x2="6.35" y2="0" width="0.1524" layer="1"/>
-<wire x1="6.35" y1="0" x2="2.1" y2="0" width="0.1524" layer="1"/>
+<wire x1="7.62" y1="-1.27" x2="6.6" y2="-0.25" width="0.1524" layer="1"/>
+<wire x1="6.6" y1="-0.25" x2="1.425" y2="-0.25" width="0.1524" layer="1"/>
 </signal>
 <signal name="!CS!">
 <contactref element="U1" pad="1"/>
